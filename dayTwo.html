@@ -1,0 +1,35 @@
+<!-- WRITE A PROGRAM WHICH ITERATES THE INTEGERS FROM 1 T0 50 
+    *FOR MULTIPLES OF THREE PRINT 'FIZZ'
+    *FOR MULTIPLES OF FIVE PRINT 'BUZZ'
+    *FOR NUMBERS WHICH ARE MULTIPLES OF BOTH FIVE AND THREE PRINT 'FIZZBUSS.'
+CODE BY MMADU DIVINE-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dayTwo</title>
+</head>
+<body>
+    
+    <script>
+        
+        for (let i = 0; i < 50; i++) {
+            if (i== 0) {
+                console.log(i);
+            }else if (i%3 == 0) {
+                console.log('fizz');
+            }else if (i%5 == 0) {
+                console.log('buzz');
+            }else if (i%3==0 && i%5==0) {
+                    console.log('fizzbuzz');
+            } else {
+                console.log(i);
+            }         
+        }
+
+    </script>
+</body>
+</html>
