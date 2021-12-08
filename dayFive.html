@@ -1,0 +1,56 @@
+<!-- WRITE A PROGRAM TO PICK A RANDOM CHARACTER FROM A GIVEN STRING. THE AMOUNT AMOUNT OF RANDOM CHARACTERS TO BE GENERATED 
+    WILL BE DETERMINED BY THE INPUT RECEIVED FROM THE USER
+
+    NT: THE INPUT FROM THE USER MUST NOT BE GREATER THAN THE LENGTH OF THE STRING.
+CODE BY MMADU DIVINE-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dayFive
+        
+    </title>
+</head>
+<body>
+    
+    <div>
+        <input type="text" class="userInput">
+        <input type="number" class="randomChar">
+        <input type="submit" class="sub">
+    </div>
+
+    <div class="userOutput"></div>
+
+    <script>
+        var userInput = document.querySelector('.userInput');
+        var randomChar = document.querySelector('.randomChar');
+        var userOutput = document.querySelector('.userOutput');
+        var sub = document.querySelector('.sub');
+
+        sub.addEventListener('click', function(){
+            var storeOutput = userInput.value;
+            var storeRandom = randomChar.value;
+
+            if(storeRandom > storeOutput.length){
+                userOutput.innerText = 'error! the number requested is larger than the length of string';
+            }else{
+                var b = '';
+                for (let i = 0; i < storeRandom; i++) {
+                    var randomNumber = getRandomNumber();
+                    var out = storeOutput.charAt(randomNumber);
+                    b += out;
+                     
+                }
+                userOutput.innerText = b;
+            }
+
+            function getRandomNumber() {
+                return Math.floor(Math.random() * storeRandom);
+            }
+        })
+    </script>
+</body>
+</html>
