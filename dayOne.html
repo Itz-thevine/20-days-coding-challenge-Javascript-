@@ -1,0 +1,40 @@
+<!-- WRITE A PROGRAM TO PRINT OR SHOW MULTIPLICATION TABLE 1-10  USING JAVASCRIPT 
+CODE BY MMADU DIVINE-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dayOne</title>
+</head>
+
+
+<body>
+
+    <script>
+        const multiplier = [];
+       for (let index = 0; index < 10 ; index++) {
+           multiplier.push(index +1);
+       }
+       console.log(multiplier);
+
+       const indx = [];
+       for (let index = 0; index < 12; index++) {
+           indx.push(index + 1);
+       }
+       console.log(indx)
+
+       multiplier.forEach(i =>{
+           indx.forEach(j => {
+               var a = String(i);
+               var b = String(j);
+               console.log( a + '*' + b + '=' + i * j);
+           })
+       })
+
+
+    </script>
+</body>
+</html>
